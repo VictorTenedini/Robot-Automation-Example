@@ -26,6 +26,10 @@ Antes de começar, você precisará ter os seguintes itens instalados em seu sis
     Baixe a versão compatível com a sua versão do Chrome em ChromeDriver - WebDriver for Chrome (https://googlechromelabs.github.io/chrome-for-testing/).
     Adicione o ChromeDriver ao seu PATH do sistema.
 
+6. **RequestsLibrary**
+   ```bash
+    pip install robotframework-requests 
+
 # Como Executar os Testes
 
 1. **Clonar o projeto**: Clone este repositório para o seu ambiente local:
@@ -34,15 +38,20 @@ Antes de começar, você precisará ter os seguintes itens instalados em seu sis
     git clone https://github.com/VictorTenedini/Robot-Automation-Example.git
     cd Robot-Automation-Example
 
-2. **Executar**: Execute a suíte de testes utilizando o comando abaixo:
+2. **Testes Web**: Para executar os testes de de Web, utilize o seguinte comando:
 
     ```bash
     robot -d reports tests/TC01.robot
 
-3. **Reports**
+3. **Testes de API**: Para executar os testes de API, utilize o seguinte comando:
 
-    -d reports: Diretório onde os relatórios de execução serão salvos.
+    ```bash
+    robot -d reports api/crud.robot
 
-    tests/TC01.robot: Caminho do arquivo de teste a ser executado.
+4. **Reports**
 
-    Após a execução, você pode visualizar os relatórios de teste na pasta reports.
+    ### -d reports: Diretório onde os relatórios de execução serão salvos.
+
+    ### tests/TC01.robot & api/crud.robot: Caminhos dos arquivos de teste a serem executados.
+
+    ### Após a execução, você pode visualizar os relatórios de testes na pasta reports.
